@@ -343,7 +343,7 @@ async def boom(_,CallbackQuery):
     fetched = f"""
 **Track Downloaded**
 ❇️**Title:** {x["title"]}
-⏳**Duration:** {round(x["duration"] / 60)} Mins
+⏳**Duration:** {round(x["duration"] / 180)} Mins
 👀**Views:** __{x["view_count"]}__
 🎥**Channel Name:** {x["uploader"]}
 __Youtube Inline Download Powered By Music__ """    
