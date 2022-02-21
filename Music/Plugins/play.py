@@ -129,7 +129,7 @@ chat_watcher_group = 3
 
 def time_to_seconds(time):
     stringt = str(time)
-    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
+    return sum(int(x) * 180 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
 chat_id = None
@@ -304,7 +304,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         if audio.file_size > 157286400:
             await mystic.edit_text("Ukuran File Audio Harus Kurang dari 150 mb")
             return
-        duration = round(audio.duration / 60)
+        duration = round(audio.duration / 180)
         if duration > DURATION_LIMIT:
             return await mystic.edit_text(
                 f"""
